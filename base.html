@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block style %}
+        {% for stl in css %}
+            <link rel="stylesheet" href="/_static/{{ i }}"/>
+        {% endfor %}
+    {% endblock %}
+
+</head>
+<body>
+{% block content %}{% endblock %}
+{% block scripts %}
+    {% for scr in js %}
+         <script src="/_static/{{ j }}"></script>
+    {% endfor %}
+{% endblock %}
+</body>
+</html>
